@@ -37,6 +37,99 @@
 
 </table> 
 
+    <hr>
+
+    <!-- 2. FORM -->
+    <h2>Registration Form</h2>
+    <form>
+        
+        <!-- Basic Inputs -->
+        <label>Name:</label>
+        <input type="text" placeholder="Enter name" required><br><br>
+
+        <label>Email:</label>
+        <input type="email" placeholder="Enter email" required><br><br>
+
+        <label>Password:</label>
+        <input type="password" required><br><br>
+
+        <!-- Radio -->
+        <label>Gender:</label>
+        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Female<br><br>
+
+        <!-- Checkbox -->
+        <label>Hobbies:</label>
+        <input type="checkbox"> Music
+        <input type="checkbox"> Sports<br><br>
+
+        <!-- Advanced Elements -->
+        <label>Course:</label>
+        <select>
+            <option>MCA</option>
+            <option>BCA</option>
+            <option>BBA</option>
+        </select><br><br>
+
+        <label>Message:</label><br>
+        <textarea rows="3" cols="30" placeholder="Write here..."></textarea><br><br>
+
+        <!-- Number Validation -->
+        <label>Age:</label>
+        <input type="number" min="18" max="30" required><br><br>
+
+        <!-- Pattern Validation -->
+        <label>Phone:</label>
+        <input type="text" pattern="[0-9]{10}" placeholder="10 digit number" required><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <hr>
+
+    <!-- 3. DIV vs SPAN -->
+    <div style="background-color: lightblue;">
+        This is a DIV (block element).
+    </div>
+
+    <p>
+        This is a <span style="color: red;">SPAN</span> (inline element).
+    </p>
+
+    <hr>
+
+    <!-- 4. AUDIO -->
+    <h2>Audio Example</h2>
+    <audio controls>
+        <source src="audio.mp3" type="audio/mpeg">
+        <source src="audio.ogg" type="audio/ogg">
+        Your browser does not support audio.
+    </audio>
+
+    <hr>
+
+    <!-- 5. VIDEO -->
+    <h2>Video Example</h2>
+    <video width="320" controls>
+        <source src="video.mp4" type="video/mp4">
+        <source src="video.ogg" type="video/ogg">
+        Your browser does not support video.
+    </video>
+
+    <hr>
+
+    <!-- 6. IFRAME (YouTube + Google Maps Example) -->
+    <h2>YouTube Video</h2>
+    <iframe width="300" height="200"
+        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+        allowfullscreen>
+    </iframe>
+
+    <h2>Google Map</h2>
+    <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18..."
+        width="300" height="200">
+    </iframe>
 
 </body>
 </html>
