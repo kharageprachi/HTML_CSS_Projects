@@ -4,6 +4,58 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phase 2</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+            margin: 20px;
+        }
+        table{
+            width: 30%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        th{
+           background-color: #4CAF50;
+           color: white; 
+        }
+
+        th, td{
+            padding: 10px;
+            text-align: center;
+        }
+
+        form{
+            background-color: white;
+            padding: 15px;
+            width: 500px;
+            border-radius: 8px;
+        }
+        input, select, textarea{
+            width: 50px;
+            padding: 5px;
+        }
+        button{
+            background-color: #4CAF50;
+            color: white;
+            padding: 8px;
+            border: none;
+            cursor: pointer;
+            text-align: center;
+            width: 100px;
+            margin-left: 200px;
+           }
+        .box{
+            background-color: lightblue;
+            padding: 10px;
+            margin-top: 10px;
+        }
+        .highlight{
+            color: red;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
    <table border="1">
@@ -88,12 +140,12 @@
     <hr>
 
     <!-- 3. DIV vs SPAN -->
-    <div style="background-color: lightblue;">
+    <div class="box">
         This is a DIV (block element).
     </div>
 
     <p>
-        This is a <span style="color: red;">SPAN</span> (inline element).
+        This is a <span  class="highlight">SPAN</span> (inline element).
     </p>
 
     <hr>
