@@ -33,16 +33,28 @@
             border: 1px solid #ddd;
         }
 
-        form{
+        .form-container{
             background-color: white;
             padding: 20px;
             width: 60%;
             border-radius: 8px;margin-bottom: 20px;
         }
-        input, select, textarea{
-            width: 200px;
-            padding: 8px;
-            margin-top: 5px;
+        input [type="radio"]{
+            width: auto;
+            margin-right: 5px;
+        }
+        input [type="checkbox"]{
+            width: auto;
+            margin-right: 5px;
+        }
+        .gender{
+            margin-top: 10px;
+        }
+        .gender label{
+            margin-bottom: 5px;
+        }
+        .gender input{
+            margin-right: 5px;
         }
         button{
             background-color: #4CAF50;
@@ -106,6 +118,7 @@
 
     <!-- 2. FORM -->
     <h2>Registration Form</h2>
+    <div class="form-container">
     <form>
         
         <!-- Basic Inputs -->
@@ -119,10 +132,12 @@
         <input type="password" required><br><br>
 
         <!-- Radio -->
+         <div class="gender">
         <label>Gender:</label>
-        <input type="radio" name="gender"> Male
+        <input type="radio" name="gender"> Male 
         <input type="radio" name="gender"> Female<br><br>
-
+        </div>
+        
         <!-- Checkbox -->
         <label>Hobbies:</label>
         <input type="checkbox"> Music
@@ -149,6 +164,7 @@
 
         <button type="submit">Submit</button>
     </form>
+    </div>
 
     <hr>
 
