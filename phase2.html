@@ -80,6 +80,11 @@
         audio, video, iframe{
             margin-top: 10px;
         }
+        #vid{
+             width: 700px;
+             height: 600px;
+             border-radius: 20px;
+        }
     </style>
 </head>
 <body>
@@ -191,7 +196,7 @@
 
     <!-- 5. VIDEO -->
     <h2>Video Example</h2>
-    <video width="320" controls>
+    <video width="320" controls id="vid">
         <source src="video.mp4" type="video/mp4">
         <source src="video.ogg" type="video/ogg">
         Your browser does not support video.
@@ -207,10 +212,7 @@
     </iframe>
 
     <h2>Google Map</h2>
-    <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18..."
-        width="300" height="200">
-    </iframe>
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.247725859692!2d74.25239407493157!3d16.714486884062488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1005044caede9%3A0xcf5d63e76abee41e!2sBharati%20Vidyapeeth%20Institute%20of%20Management%20Kolhapur!5e0!3m2!1sen!2sus!4v1772778236863!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 </body>
 </html>
