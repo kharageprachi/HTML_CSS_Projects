@@ -1,292 +1,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phase 2</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body{
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        table{
-            width: 60%;
-            border-collapse: collapse;
-            background-color: white;
-            margin-bottom: 20px;
-            
-        }
-        th{
-           background-color: #4CAF50;
-           color: white; 
-        }
+<title>Student Portal</title>
 
-        th, td{
-            padding: 10px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
+<script src="https://cdn.tailwindcss.com"></script>
 
-        .form-container{
-            background-color: white;
-            padding: 20px;
-            width: 60%;
-            border-radius: 8px;margin-bottom: 20px;
-        }
-        input[type="radio"]{
-            width: auto;
-            margin-right: 5px;
-        }
-        input[type="checkbox"]{
-            width: auto;
-            margin-right: 5px;
-        }
-        .gender{
-            margin-top: 10px;
-        }
-        .gender label{
-            margin-bottom: 5px;
-        }
-        .gender input{
-            margin-right: 5px;
-        }
-        button{
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px;
-            border: none;
-            cursor: pointer;
-            text-align: center;
-            width: 100px;
-            margin-top: 10px;
-           }
-        .box{
-            background-color: lightblue;
-            padding: 10px;
-            margin-top: 10px;
-            width: 400px;
-            text-align: center;
-        }
-        .highlight{
-            color: red;
-            font-weight: bold;
-        }
-        audio, video, iframe{
-            margin-top: 10px;
-        }
-        #vid{
-             width: 700px;
-             height: 600px;
-             border-radius: 20px;
-        }
-    </style>
 </head>
-<body>
-   <table border="1">
-    
-    <thead>
-        <tr>
-            <th>Roll No</th>
-            <th>Name</th>
-            <th>Course</th>
-        </tr>
-    </thead>
 
-    <tbody>
-        <tr>
-            <td>101</td>
-            <td>Prachi</td>
-            <td>BCA</td>
-        </tr>
-        <tr>
-            <td>102</td>
-            <td>Vaishnavi</td>
-            <td>BCA</td>
-        </tr>
-    </tbody>
+<body class="bg-gradient-to-br from-indigo-100 to-blue-200 min-h-screen">
 
-    <tfoot>
-        <tr>
-            <td colspan="3">Total Students: 2</td>
-        </tr>
-    </tfoot>
+<!-- HEADER -->
 
-</table> 
+<header class="bg-indigo-600 text-white p-6 shadow-lg">
+<div class="max-w-6xl mx-auto flex justify-between items-center">
+<h1 class="text-2xl font-bold">Student Portal</h1>
 
-    <hr>
+<nav class="space-x-6">
+<a href="#" class="hover:text-gray-200">Home</a>
+<a href="#" class="hover:text-gray-200">Students</a>
+<a href="#" class="hover:text-gray-200">Register</a>
+<a href="#" class="hover:text-gray-200">Media</a>
+</nav>
 
-    <!-- 2. FORM -->
-    <h2>Registration Form</h2>
-    <div class="form-container">
-    <form onsubmit="return validateForm()" novalidate>
-        
-        <!-- Basic Inputs -->
-        <label>Name:</label>
-        <input type="text" id="name" name="Name" placeholder="Enter name" required><br><br>
+</div>
+</header>
 
-        <label>Email:</label>
-        <input type="email" id="email" name="Email" placeholder="Enter email" required><br><br>
+<div class="max-w-6xl mx-auto p-6 space-y-10">
 
-        <label>Password:</label>
-        <input type="password" id="password" name="Password" placeholder="Password" required><br><br>
+<!-- TABLE SECTION -->
 
-        <!-- Radio -->
-         <div class="gender">
-        <label>Gender:</label>
-        <input type="radio" name="gender" value="Male"> Male 
-        <input type="radio" name="gender" value="Female"> Female<br><br>
-        </div>
-        
-        <!-- Checkbox -->
-        <label>Hobbies:</label>
-        <input type="checkbox" name="hobbies" value="Music"> Music
-        <input type="checkbox" name="hobbies" value="Sports"> Sports<br><br>
+<section class="bg-white p-6 rounded-xl shadow-lg">
 
-        <!-- Advanced Elements -->
-        <label>Course:</label>
-        <select id="course">
-            <option>MCA</option>
-            <option>BCA</option>
-            <option>BBA</option>
-        </select><br><br>
+<h2 class="text-xl font-semibold mb-4">Student Table</h2>
 
-        <label>Message:</label><br>
-        <textarea rows="3" cols="30" id="message" placeholder="Write here..."></textarea><br><br>
+<table class="w-full border border-gray-200">
 
-        <!-- Number Validation -->
-        <label>Age:</label>
-        <input type="number" min="18" max="30" id="age" required><br><br>
+<thead class="bg-indigo-500 text-white">
 
-        <!-- Pattern Validation -->
-        <label>Phone:</label>
-        <input type="text" pattern="[0-9]{10}" id="phone" placeholder="10 digit number" required><br><br>
+<tr>
+<th class="p-3">Roll No</th>
+<th class="p-3">Name</th>
+<th class="p-3">Course</th>
+</tr>
 
-        <button type="submit">Submit</button>
-    </form>
-    </div>
+</thead>
 
-    <script>
-        function validateForm(){
-            
-            let name = document.getElementById("name").value;
-            if(name =="") {
-                alert("Please enter name.");
-                return false;
-            }
+<tbody class="text-center">
 
-            let email = document.getElementById("email").value;
-            if(email =="") {
-                alert("Please enter email.");
-                return false;
-            }
+<tr class="border-t hover:bg-gray-100">
+<td class="p-3">101</td>
+<td class="p-3">Prachi</td>
+<td class="p-3">BCA</td>
+</tr>
 
-            let password = document.getElementById("password").value;
-            if(password =="") {
-                alert("Password cannot be empty.");
-                return false;
-            }
-            if(password.length < 6) {
-                alert("Password must be at least 6 charactters.");
-                return false;
-            }
+<tr class="border-t hover:bg-gray-100">
+<td class="p-3">102</td>
+<td class="p-3">Vaishnavi</td>
+<td class="p-3">BCA</td>
+</tr>
 
-            let gender = document.querySelector('input[name="gender"]:checked');
-            if(gender ==null) {
-                alert("Please select your gender.");
-                return false;
-            }
+</tbody>
 
-            let hobbies = document.querySelectorAll('input[name="hobbies"]:checked').length;
-            if(hobbies ==0) {
-                alert("Please select your hobbies.");
-                return false;
-            }
-           
-            let course =document.getElementById("course").value;
+<tfoot class="bg-gray-50 text-center font-semibold">
+<tr>
+<td colspan="3" class="p-3">Total Students : 2</td>
+</tr>
+</tfoot>
 
-            if(course =="") {
-                alert("Please select the course.");
-                return false;
-            }
-            let message = document.getElementById("message").value;
-            if(message =="") {
-                alert("Please enter your message.");
-                return false;
-            }
+</table>
 
-            let age = document.getElementById("age").value;
-            if(age =="") {
-                alert("please enter your age.");
-                return false;
-            }
-            if (age < 18 || age > 30) {
-                alert("Please enter the age between 18 and 30.");
-                return false;
-            }
+</section>
 
-            let phone = document.getElementById("phone").value;
-            if (phone =="") {
-                alert("Please enter your phone number.");
-                return false;
-            }
-            let phonePattern = /^[0-9]{10}$/;
-            if (!phonePattern.test(phone)) {
-                alert("Phone number must be 10 digits.");
-                return false;
-            }
-            alert("Form submitted successfully..!");
-            return true;
-        }
-    </script>
+<!-- FORM -->
 
-    <hr>
+<section class="bg-white p-6 rounded-xl shadow-lg">
 
-    <!-- 3. DIV vs SPAN -->
-    <div class="box">
-        This is a DIV (block element).
-    </div>
+<h2 class="text-xl font-semibold mb-4">Registration Form</h2>
 
-    <p>
-        This is a <span  class="highlight">SPAN</span> (inline element).
-    </p>
+<form onsubmit="return validateForm()" class="space-y-4">
 
-    <hr>
+<input
+id="name"
+type="text"
+placeholder="Name"
+class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-400">
 
-    <!-- 4. AUDIO -->
-    <h2>Audio Example</h2>
-    <audio controls>
-        <source src="audio.mp3" type="audio/mpeg">
-        <source src="audio.ogg" type="audio/ogg">
-        Your browser does not support audio.
-    </audio>
+<input
+id="email"
+type="email"
+placeholder="Email"
+class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-400">
 
-    <hr>
+<input
+id="password"
+type="password"
+placeholder="Password"
+class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-indigo-400">
 
-    <!-- 5. VIDEO -->
-    <h2>Video Example</h2>
-    <video width="320" controls id="vid">
-        <source src="video.mp4" type="video/mp4">
-        <source src="video.ogg" type="video/ogg">
-        Your browser does not support video.
-    </video>
+<div>
+<label class="font-semibold">Gender</label><br>
 
-    <hr>
+<label class="mr-4">
+<input type="radio" name="gender"> Male
+</label>
 
-    <!-- 6. IFRAME (YouTube + Google Maps Example) -->
-    <h2>YouTube Video</h2>
-    <iframe width="300" height="200"
-        src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-        allowfullscreen>
-    </iframe>
+<label>
+<input type="radio" name="gender"> Female
+</label>
+</div>
 
-    <h2>Google Map</h2>
-   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3821.247725859692!2d74.25239407493157!3d16.714486884062488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc1005044caede9%3A0xcf5d63e76abee41e!2sBharati%20Vidyapeeth%20Institute%20of%20Management%20Kolhapur!5e0!3m2!1sen!2sus!4v1772778236863!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+<div>
+<label class="font-semibold">Hobbies</label><br>
+
+<label class="mr-4">
+<input type="checkbox" name="hobbies"> Music
+</label>
+
+<label>
+<input type="checkbox" name="hobbies"> Sports
+</label>
+</div>
+
+<select
+id="course"
+class="w-full p-3 border rounded-lg">
+
+<option value="">Select Course</option>
+<option>BCA</option>
+<option>MCA</option>
+<option>BBA</option>
+
+</select>
+
+<textarea
+id="message"
+rows="3"
+placeholder="Message"
+class="w-full p-3 border rounded-lg"></textarea>
+
+<input
+id="age"
+type="number"
+min="18"
+max="30"
+placeholder="Age"
+class="w-full p-3 border rounded-lg">
+
+<input
+id="phone"
+type="text"
+placeholder="Phone (10 digits)"
+class="w-full p-3 border rounded-lg">
+
+<button
+class="w-full bg-indigo-600 text-white p-3 rounded-lg hover:bg-indigo-700 transition">
+
+Submit
+
+</button>
+
+</form>
+
+</section>
+
+<!-- DIV VS SPAN -->
+
+<section class="bg-white p-6 rounded-xl shadow-lg">
+
+<h2 class="text-xl font-semibold mb-4">DIV vs SPAN</h2>
+
+<div class="bg-blue-100 p-4 rounded-lg text-center mb-4">
+This is a DIV (block element)
+</div>
+
+<p>
+This is a <span class="text-pink-600 font-semibold">SPAN</span> (inline element)
+</p>
+
+</section>
+
+<!-- AUDIO -->
+
+<section class="bg-white p-6 rounded-xl shadow-lg">
+
+<h2 class="text-xl font-semibold mb-4">Audio</h2>
+
+<audio controls class="w-full">
+<source src="audio.mp3">
+</audio>
+
+</section>
+
+<!-- VIDEO -->
+
+<section class="bg-white p-6 rounded-xl shadow-lg">
+
+<h2 class="text-xl font-semibold mb-4">Video</h2>
+
+<video controls class="rounded-lg w-full max-w-xl">
+<source src="video.mp4">
+</video>
+
+</section>
+
+<!-- YOUTUBE -->
+
+<section class="bg-white p-6 rounded-xl shadow-lg">
+
+<h2 class="text-xl font-semibold mb-4">YouTube</h2>
+
+<iframe
+class="rounded-lg"
+width="420"
+height="240"
+src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+allowfullscreen>
+</iframe>
+
+</section>
+
+<!-- MAP -->
+
+<section class="bg-white p-6 rounded-xl shadow-lg">
+
+<h2 class="text-xl font-semibold mb-4">Google Map</h2>
+
+<iframe
+class="rounded-lg"
+width="100%"
+height="350"
+src="https://www.google.com/maps?q=kolhapur&output=embed">
+</iframe>
+
+</section>
+
+</div>
+
+<footer class="text-center p-6 text-gray-600">
+© 2026 Student Portal
+</footer>
+
+
+<script>
+
+function validateForm(){
+
+let name=document.getElementById("name").value;
+
+if(name==""){
+alert("Please enter name")
+return false
+}
+
+let email=document.getElementById("email").value
+
+if(email==""){
+alert("Please enter email")
+return false
+}
+
+let password=document.getElementById("password").value
+
+if(password.length<6){
+alert("Password must be at least 6 characters")
+return false
+}
+
+let gender=document.querySelector('input[name="gender"]:checked')
+
+if(gender==null){
+alert("Please select gender")
+return false
+}
+
+let hobbies=document.querySelectorAll('input[name="hobbies"]:checked').length
+
+if(hobbies==0){
+alert("Select at least one hobby")
+return false
+}
+
+let age=document.getElementById("age").value
+
+if(age<18 || age>30){
+alert("Age must be between 18 and 30")
+return false
+}
+
+let phone=document.getElementById("phone").value
+
+let pattern=/^[0-9]{10}$/
+
+if(!pattern.test(phone)){
+alert("Phone must be 10 digits")
+return false
+}
+
+alert("Form submitted successfully")
+
+return true
+
+}
+
+</script>
 
 </body>
 </html>
