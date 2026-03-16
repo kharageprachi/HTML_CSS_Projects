@@ -11,54 +11,55 @@
 <body class="bg-gray-100 flex justify-center items-center min-h-screen">
     <main>
         <section>
-            <article>
-                <div class="bg-white p-8 rounded-xl shadow-lg w-96">
-                    <h2 class="text-2xl font-bold text-center mb-6">Contact US</h2>
-                
+            <article class="border border-blue-400 backdrop-blur-md rounded-3xl p-6 shadow-2xl">
+                <div class="bg-[#c8f2fa] p-8 rounded-xl shadow-lg w-96">
+                    <h2 class="text-2xl font-bold text-center text-gray-800 mb-6">Contact US</h2>
+                                    
                     <!--Contact Form-->
                     <form id="contactForm">
 
                         <!--Name-->
                         <label class="block font-medium mt-3">Name:</label>
-                        <input type="text" id="name" class="w-full border border-gray-300 p-2 rounded mb-2">
+                        <input type="text" id="name" placeholder="Enter your name" class="w-full border border-blue-400 p-2 rounded mb-2 placeholder-gray-400 text-sm">
                         <span class="text-red-500 text-sm" id="nameError"></span> <br>
 
                         <!--Email Address-->
                         <label  class="block font-medium mt-3">Email address:</label>
-                        <input type="email" id="email" class="w-full border border-gray-300 p-2 rounded mb-2">
+                        <input type="email" id="email" placeholder="example@gmail.com" class="w-full border border-blue-400 p-2 rounded mb-2 placeholder-gray-400 text-sm">
                         <span class="text-red-500 text-sm" id="emailError"></span> <br>
 
                         <!--Phone no-->
                         <label  class="block font-medium mt-3">Phone no:</label>
-                        <input type="tel" id="phone" class="w-full border border-gray-300 p-2 rounded mb-2">
+                        <input type="tel" id="phone" maxlength="10" placeholder="Enter 10 digits phone number" class="w-full border border-blue-400 p-2 rounded mb-2 placeholder-gray-400 text-sm">
                         <span class="text-red-500 text-sm" id="phoneError"></span> <br>
-                        
+                                            
                         <!--Gender-->
                         <label  class="block font-medium mt-3">Gender:</label>
-                        <div class="flex gap-4 mt-2">
-                            <input type="radio" name="gender" id="male" value="male">Male 
-                            <input type="radio" name="gender" id="female" value="female">Female 
-                            <input type="radio" name="gender" id="other" value="other">Other <br>
-                        </div>
+                            <div class="flex gap-4 mt-2">
+                                <input type="radio" name="gender" id="male" value="male">Male 
+                                <input type="radio" name="gender" id="female" value="female">Female 
+                                <input type="radio" name="gender" id="other" value="other">Other <br>
+                            </div>
 
                         <!--Answer-->
                         <label  class="block font-medium mt-3">How did you hear about us ?</label>
-                        <textarea rows="2" id="answer" class="w-full border border-gray-300 p-2 rounded mb-2"></textarea>
+                        <textarea rows="2" id="answer" placeholder="Write your answer here..." class="w-full border border-blue-400 p-2 rounded mb-2 placeholder-gray-400 text-sm"></textarea>
                         <span class="text-red-500 text-sm" id="answerError"></span> <br>
-                        
+                                            
 
                         <!--Message-->
                         <label  class="block font-medium mt-3">Message:</label>
-                        <textarea rows="4" id="message" class="w-full border border-gray-300 p-2 rounded mb-2"></textarea>
+                        <textarea rows="4" id="message" placeholder="Write your message here..." class="w-full border border-blue-400 p-2 rounded mb-2 placeholder-gray-400 text-sm"></textarea>
                         <span class="text-red-500 text-sm" id="messageError"></span> <br>
-                        
+                                            
 
                         <!--Reset and Submit button-->
                         <button type="reset" class="bg-gray-400 text-white px-4 py-2 rounded mt-4 w-full">Reset Form</button>
                         <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded mt-3 w-full">Submit Form</button>
+                        
 
                     </form>
-                </div>
+                </div>     
             </article>
         </section>
     </main>
